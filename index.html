@@ -140,7 +140,7 @@
 
   .samples-box{
     margin-top:16px; background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:12px 14px;
-    max-height: 280px; overflow-y: auto;
+    max-height: 320px; overflow-y: auto;
   }
   .samples-box h4{ margin:0 0 8px 0; font-family:'IBM Plex Mono', monospace; font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; color:var(--pine); }
   .sample-item{ background:#fff; border:1px solid var(--line); border-radius:6px; padding:8px 10px; margin-bottom:8px; font-size:.84rem; }
@@ -194,7 +194,7 @@
 <body>
 
 <header class="top">
-  <h1>Profile Building Toolkit</h1>
+  <h1>Profile building toolkit</h1>
   <p>Build a profile that opens doors. Go beyond a resume with a guided, section-by-section webpage that helps you craft your professional identity.</p>
 </header>
 
@@ -227,21 +227,21 @@
         <label for="targetRole">Target Role / Job Title<span class="req">*</span></label>
         <input type="text" id="targetRole" placeholder="e.g. Full Stack Developer, Backend Intern, Data Analyst">
 
-        <label for="targetCompany">Target Company <span class="hint" style="display:inline;">(optional)</span></label>
+        <label for="targetCompany">Target Company<span class="req">*</span></label>
         <input type="text" id="targetCompany" placeholder="e.g. Zoho, TCS, Amazon, Early-stage Startup">
 
-        <label for="expectedSkills">Expected Key Skills for this Role
+        <label for="expectedSkills">Expected Key Skills for this Role<span class="req">*</span>
           <span class="hint">List 4–6 core technologies or competencies recruiters will search for.</span>
         </label>
         <input type="text" id="expectedSkills" placeholder="e.g. React, Node.js, PostgreSQL, REST APIs, Git">
 
-        <label for="expectedProjects">Types of Projects Recruiter Expects
+        <label for="expectedProjects">Types of Projects Recruiter Expects<span class="req">*</span>
           <span class="hint">What kind of real-world problem should your projects demonstrate?</span>
         </label>
         <textarea id="expectedProjects" placeholder="e.g. Production-ready web apps with authentication, database indexing, and CRUD functionality. Real-time updates or API integrations."></textarea>
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample target profiles</h4>
           <div class="sample-item">
             <div class="sample-title">Full-Stack / Web Engineer</div>
             <div>React, Node.js, PostgreSQL, REST APIs, Git, Docker • Production apps with user auth, state management, DB optimization.</div>
@@ -251,12 +251,24 @@
             <div>Python, FastAPI, Node.js, MySQL, Redis, AWS • Microservices, API optimization, DB indexing, authentication protocols.</div>
           </div>
           <div class="sample-item">
+            <div class="sample-title">Frontend Developer</div>
+            <div>React.js, TypeScript, Next.js, Tailwind CSS, Redux • Responsive web UI, accessibility standards, state management, performance tuning.</div>
+          </div>
+          <div class="sample-item">
             <div class="sample-title">Data Analyst / ML Trainee</div>
             <div>Python, Pandas, SQL, Tableau, Scikit-learn • Data pipeline cleaning, statistical modeling, dashboard visualization.</div>
           </div>
           <div class="sample-item">
             <div class="sample-title">Cloud / DevOps Associate</div>
             <div>Docker, Linux, AWS (S3/EC2), CI/CD, Shell Scripting • Containerization, automated deployment pipelines, infrastructure security.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Mobile Application Developer</div>
+            <div>Flutter, Dart, React Native, Firebase, SQLite • Cross-platform UI development, offline-first syncing, native push notifications.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Cybersecurity / QA Analyst</div>
+            <div>Python, OWASP Top 10, Selenium, Wireshark, Linux • Automated UI testing, vulnerability scanning, penetration testing basics.</div>
           </div>
         </div>
 
@@ -274,46 +286,48 @@
 
         <div class="coach-note">
           <span class="tag">Privacy &amp; Signal Note</span>
-          <p>Since this resume template is published publicly on GitHub, we avoid collecting real personal phone numbers and private email addresses.</p>
+          <p>Please enter full contact details. Professional profiles like GitHub and LinkedIn serve as living proof of your codebase quality and network.</p>
         </div>
 
-      <label for="fullName">Full name<span class="req">*</span></label>
-<input type="text" id="fullName" placeholder="Andrew Veda">
+        <label for="fullName">Full name<span class="req">*</span></label>
+        <input type="text" id="fullName" placeholder="Andrew Veda">
 
-        <label for="email">Email<span class="req">*</span>
-          <span class="hint">Public placeholder used to protect your personal privacy.</span>
-        </label>
+        <label for="email">Email address<span class="req">*</span></label>
         <input type="email" id="email" value="firstname.secondname@domain.com">
 
-        <label for="phone">Phone number</label>
+        <label for="phone">Phone number<span class="req">*</span></label>
         <input type="tel" id="phone" value="91 2345 6789">
 
-        <label for="location">City, State</label>
+        <label for="location">City, State<span class="req">*</span></label>
         <input type="text" id="location" placeholder="Chennai, Tamil Nadu">
 
-        <label for="linkedin">LinkedIn URL</label>
+        <label for="linkedin">LinkedIn profile URL<span class="req">*</span></label>
         <input type="url" id="linkedin" placeholder="linkedin.com/in/andrewveda">
 
-        <label for="github">GitHub profile
-  <span class="hint">Pin your 2–3 best repos on your GitHub profile before you send this out.</span>
-</label>
-<input type="url" id="github" placeholder="github.com/andrewveda">
+        <label for="github">GitHub profile URL<span class="req">*</span>
+          <span class="hint">Pin your 2–3 best repos on your GitHub profile before sending this out.</span>
+        </label>
+        <input type="url" id="github" placeholder="github.com/andrewveda">
 
-        <label for="portfolio">Personal website / portfolio
+        <label for="portfolio">Personal website / portfolio URL<span class="req">*</span>
           <span class="hint">The one-page resume acts as a curated highlight reel — your portfolio is where the depth lives.</span>
         </label>
         <input type="url" id="portfolio" placeholder="andrewveda.github.io">
 
-        <label for="otherProfiles">Other coding profiles <span class="hint" style="display:inline;">(optional)</span>
-          <span class="hint">LeetCode, Codeforces, HackerRank, GeeksforGeeks</span>
+        <label for="otherProfiles">Other coding profiles<span class="req">*</span>
+          <span class="hint">LeetCode, Codeforces, HackerRank, GeeksforGeeks profiles</span>
         </label>
         <input type="text" id="otherProfiles" placeholder="LeetCode: leetcode.com/u/andrewveda">
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample contact setups</h4>
           <div class="sample-item">
-            <div class="sample-title">Clean Professional Links</div>
-            <div>LinkedIn: linkedin.com/in/andrewveda • GitHub: github.com/andrewveda • Portfolio: andrewveda.github.io</div>
+            <div class="sample-title">Standard Professional Profile Suite</div>
+            <div>LinkedIn: linkedin.com/in/andrewveda • GitHub: github.com/andrewveda • Portfolio: andrewveda.github.io • LeetCode: leetcode.com/u/andrewveda</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Competitive Programming Focus</div>
+            <div>GitHub: github.com/dev-student • Codeforces: codeforces.com/profile/dev_rank • LeetCode: leetcode.com/u/dev_rank</div>
           </div>
         </div>
 
@@ -334,13 +348,13 @@
           <p>People judge an experience mostly by its high point and how it ends — the peak-end rule. Open with your single strongest, most specific result, not a vague adjective like "hardworking."</p>
         </div>
 
-        <label for="summary">Professional summary
+        <label for="summary">Professional summary<span class="req">*</span>
           <span class="hint">Try: [what you are] specializing in [target role focus] with a track record of [one specific result].</span>
         </label>
         <textarea id="summary" placeholder="MCA student specializing in full-stack web systems, with a track record of shipping production code — built and deployed a campus event platform used by 1,200+ students."></textarea>
 
         <div class="samples-box">
-          <h4>💡 Role-tailored Sample Summaries for MCA Students</h4>
+          <h4>💡 Comprehensive Role-Tailored Sample Summaries</h4>
           <div class="sample-item">
             <div class="sample-title">Full-Stack Web Development</div>
             <div>MCA student specializing in modern web development with React and Node.js. Track record of shipping production-ready applications, including a full-stack campus event platform deployed to 1,200+ active users.</div>
@@ -357,6 +371,18 @@
             <div class="sample-title">Cloud Infrastructure &amp; DevOps</div>
             <div>MCA student experienced in containerized deployments and CI/CD automation. Designed automated cloud workflows using Docker and AWS S3/EC2, cutting build deployment times by 40% for departmental web apps.</div>
           </div>
+          <div class="sample-item">
+            <div class="sample-title">Frontend Specialist</div>
+            <div>Computer Science student passionate about building highly performant, accessible web interfaces. Expert in React, Redux, and Tailwind CSS; refactored student portal UI to achieve 98+ Google Lighthouse performance score.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Mobile App Engineer</div>
+            <div>Software engineering student specializing in cross-platform mobile development using Flutter and Firebase. Published 2 apps to Google Play Store with 500+ combined downloads and a 4.8-star average user rating.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Cybersecurity &amp; System Administration</div>
+            <div>Computer Applications post-graduate with focused expertise in network security and vulnerability assessments. Conducted security audits for 3 academic web portals, identifying and patching 8 OWASP vulnerabilities.</div>
+          </div>
         </div>
 
         <div class="step-nav">
@@ -369,7 +395,7 @@
       <section class="step" data-step="3">
         <div class="step-eyebrow">Step 4 / 12</div>
         <h2>Technical skills</h2>
-        <p class="step-intro">Languages, frameworks, tools, databases — kept to what you can actually defend in an interview.</p>
+        <p class="step-intro">Languages, frameworks, tools, databases — kept to what you can actually defend in an interview. <strong>At least 3 technical skills are required.</strong></p>
 
         <div class="coach-note">
           <span class="tag">Why this works</span>
@@ -379,11 +405,11 @@
         <div class="skill-add-grid">
           <div class="skill-add-row">
             <div>
-              <label for="techSkillInput">Skill</label>
+              <label for="techSkillInput">Skill<span class="req">*</span></label>
               <input type="text" id="techSkillInput" placeholder="e.g. Python, React, Firebase, Docker">
             </div>
             <div>
-              <label for="techSkillEvidence">Quantify it / which project used it?</label>
+              <label for="techSkillEvidence">Quantify it / which project used it?<span class="req">*</span></label>
               <input type="text" id="techSkillEvidence" placeholder="e.g. 2 yrs, used in Campus Library System">
             </div>
             <button type="button" class="tag-add-btn" id="techSkillAddBtn">Add</button>
@@ -392,7 +418,7 @@
         <div class="tag-list" id="techSkillList"></div>
 
         <div class="samples-box">
-          <h4>💡 Comprehensive Technical Skills Samples</h4>
+          <h4>💡 Extensive Technical Skills Samples</h4>
           <div class="sample-item"><div class="sample-title">Python</div>2 years — Built RESTful APIs (FastAPI) &amp; data analysis scripts across 4 projects.</div>
           <div class="sample-item"><div class="sample-title">JavaScript / TypeScript</div>2 years — Modern ES6+, Async/Await, DOM Manipulation, React UI development.</div>
           <div class="sample-item"><div class="sample-title">Java</div>1.5 years — Core OOP concepts, Data Structures, Multithreading, JDBC connectivity.</div>
@@ -405,6 +431,11 @@
           <div class="sample-item"><div class="sample-title">Docker</div>1 year — Containerizing Node.js and Python microservices for local and cloud deployment.</div>
           <div class="sample-item"><div class="sample-title">HTML5 &amp; CSS3 / Tailwind</div>2 years — Semantic markup, Flexbox, CSS Grid, mobile-first responsive design.</div>
           <div class="sample-item"><div class="sample-title">Linux / Shell Scripting</div>1.5 years — Bash automation scripts, SSH server management, cron jobs, environment setup.</div>
+          <div class="sample-item"><div class="sample-title">FastAPI / Flask</div>1 year — Lightweight REST API creation, Swagger documentation, asynchronous handlers.</div>
+          <div class="sample-item"><div class="sample-title">Redis</div>1 year — In-memory caching, session storage management, key-value lookup acceleration.</div>
+          <div class="sample-item"><div class="sample-title">AWS (S3, EC2, Lambda)</div>1 year — Cloud deployment, bucket policy setup, serverless execution functions.</div>
+          <div class="sample-item"><div class="sample-title">GraphQL</div>1 year — Schema design, resolvers execution, preventing over-fetching in React apps.</div>
+          <div class="sample-item"><div class="sample-title">Pandas &amp; NumPy</div>1.5 years — Data cleaning, array manipulation, data frame aggregations on 100k+ rows.</div>
         </div>
 
         <div class="step-nav">
@@ -417,7 +448,7 @@
       <section class="step" data-step="4">
         <div class="step-eyebrow">Step 5 / 12</div>
         <h2>Soft skills</h2>
-        <p class="step-intro">Kept separate from technical skills on purpose — they need a different kind of proof.</p>
+        <p class="step-intro">Kept separate from technical skills on purpose — they need concrete proof. <strong>At least 3 soft skills are required.</strong></p>
 
         <div class="coach-note">
           <span class="tag">Why this works</span>
@@ -427,11 +458,11 @@
         <div class="skill-add-grid">
           <div class="skill-add-row">
             <div>
-              <label for="softSkillInput">Soft skill</label>
+              <label for="softSkillInput">Soft skill<span class="req">*</span></label>
               <input type="text" id="softSkillInput" placeholder="e.g. Technical Writing, Team Leadership">
             </div>
             <div>
-              <label for="softSkillEvidence">What's the proof?</label>
+              <label for="softSkillEvidence">What's the proof?<span class="req">*</span></label>
               <input type="text" id="softSkillEvidence" placeholder="e.g. Authored documentation used by 4 team members">
             </div>
             <button type="button" class="tag-add-btn" id="softSkillAddBtn">Add</button>
@@ -440,7 +471,7 @@
         <div class="tag-list" id="softSkillList"></div>
 
         <div class="samples-box">
-          <h4>💡 Comprehensive Soft Skills Samples</h4>
+          <h4>💡 Extensive Soft Skills Samples</h4>
           <div class="sample-item"><div class="sample-title">Technical Communication</div>Presented 3 technical research papers at inter-college symposiums &amp; authored documentation.</div>
           <div class="sample-item"><div class="sample-title">Agile &amp; Team Collaboration</div>Served as student team lead for a 4-person capstone project, managing sprint backlogs.</div>
           <div class="sample-item"><div class="sample-title">Problem Solving &amp; Analytical Thinking</div>Solved 250+ LeetCode algorithmic challenges with focus on dynamic programming and graphs.</div>
@@ -448,6 +479,9 @@
           <div class="sample-item"><div class="sample-title">Event &amp; Time Management</div>Organized a national 24-hour hackathon coordinating 150+ participants on schedule.</div>
           <div class="sample-item"><div class="sample-title">Mentorship &amp; Knowledge Sharing</div>Conducted 6 hands-on workshops on Git/GitHub for 60+ junior MCA students.</div>
           <div class="sample-item"><div class="sample-title">Attention to Detail</div>Reviewed and refactored 3,000+ lines of codebase for security vulnerabilities and bugs.</div>
+          <div class="sample-item"><div class="sample-title">Cross-Functional Coordination</div>Liaised between department faculty, alumni sponsors, and student participants for college symposium.</div>
+          <div class="sample-item"><div class="sample-title">Conflict Resolution</div>Successfully managed technical design disagreements during capstone development, keeping team on schedule.</div>
+          <div class="sample-item"><div class="sample-title">Crisis Management</div>Resolved real-time database server crashes during live college event, restoring service within 10 minutes.</div>
         </div>
 
         <div class="step-nav">
@@ -460,7 +494,7 @@
       <section class="step" data-step="5">
         <div class="step-eyebrow">Step 6 / 12</div>
         <h2>Projects</h2>
-        <p class="step-intro">Academic, personal, or hackathon projects. For a student resume, this section often carries the most weight.</p>
+        <p class="step-intro">Academic, personal, or hackathon projects. For a student resume, this section carries the most weight.</p>
 
         <div class="coach-note">
           <span class="tag">Why this works</span>
@@ -471,7 +505,7 @@
         <button type="button" class="add-entry" id="addProject">+ Add another project</button>
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample project entries</h4>
           <div class="sample-item">
             <div class="sample-title">Campus Library Management System (React, Firebase, Node.js)</div>
             <div>• Developed a QR-based check-in application deployed for 1,200+ active students.<br>• Reduced average queue waiting time from 12 minutes to under 3 minutes per student.<br>• Implemented real-time database listeners to track live library seat availability.</div>
@@ -483,6 +517,18 @@
           <div class="sample-item">
             <div class="sample-title">Real-Time E-Commerce Analytics Dashboard (React, Node.js, PostgreSQL, Socket.io)</div>
             <div>• Built a real-time order tracking portal rendering live sales metrics with dynamic charts.<br>• Optimized SQL query indexing, reducing dashboard payload load time by 45%.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">AI-Powered Resume Screening Engine (Python, FastAPI, Scikit-learn, SpaCy)</div>
+            <div>• Developed an automated parser extracting skills, experience, and keywords from 200+ PDF resumes.<br>• Implemented TF-IDF and cosine similarity metrics to rank candidates against job descriptions with 91% accuracy.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Distributed Task Scheduler &amp; Queue (Go, Redis, Docker)</div>
+            <div>• Built a lightweight asynchronous task execution engine processing job queues in concurrent worker pools.<br>• Integrated dead-letter queue recovery mechanism reducing failed payload loss to 0%.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">IoT Smart Agriculture Monitoring Portal (Node.js, Express, MongoDB, ESP8266)</div>
+            <div>• Connected hardware sensors to stream real-time soil moisture and temperature metrics every 30 seconds.<br>• Configured automated SMS notifications to alert farm supervisors when soil thresholds dropped below target levels.</div>
           </div>
         </div>
 
@@ -496,7 +542,7 @@
       <section class="step" data-step="6">
         <div class="step-eyebrow">Step 7 / 12</div>
         <h2>Experience &amp; internships</h2>
-        <p class="step-intro">Jobs, internships, or teaching assistantships. Most recent first. Skip if none yet.</p>
+        <p class="step-intro">Jobs, internships, or teaching assistantships. Most recent first.</p>
 
         <div class="coach-note">
           <span class="tag">Why this works</span>
@@ -507,7 +553,7 @@
         <button type="button" class="add-entry" id="addExperience">+ Add another role</button>
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample experience entries</h4>
           <div class="sample-item">
             <div class="sample-title">Software Engineering Intern — Bluepeak Systems (Jun 2025 – Aug 2025)</div>
             <div>• Rebuilt automated onboarding email pipeline, cutting user drop-off rate from 22% to 9%.<br>• Designed and integrated 3 RESTful endpoints consumed by mobile app teams.<br>• Authored unit test coverage improving core module reliability by 28%.</div>
@@ -515,6 +561,18 @@
           <div class="sample-item">
             <div class="sample-title">Web Development Intern — CyberTech Solutions (Jan 2025 – Apr 2025)</div>
             <div>• Converted static client landing pages into responsive, accessible UI modules using React.<br>• Fixed 15+ high-priority frontend bugs reported in client ticketing system during 12-week sprint.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Graduate Teaching Assistant — Department of Computer Science (Aug 2024 – Dec 2024)</div>
+            <div>• Assisted professors in mentoring 90+ undergraduate students in C++ Data Structures laboratory.<br>• Conducted weekly code review sessions and graded 300+ programming assignments with constructive feedback.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Data Analytics Intern — Apex Metrics (May 2024 – Jul 2024)</div>
+            <div>• Cleaned and structured 100K+ raw customer transaction records using Pandas and SQL.<br>• Built 4 interactive Tableau dashboards utilized by senior management to evaluate quarterly sales trends.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Open Source Developer Apprentice — Tech Community (Sep 2024 – Nov 2024)</div>
+            <div>• Contributed 6 accepted pull requests to community UI library, resolving keyboard navigation bugs.<br>• Improved repository documentation, helping reduce new contributor onboarding queries by 30%.</div>
           </div>
         </div>
 
@@ -539,7 +597,7 @@
         <button type="button" class="add-entry" id="addRole">+ Add another role &amp; responsibility</button>
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample leadership entries</h4>
           <div class="sample-item">
             <div class="sample-title">Student Coordinator — National Level Tech Symposium (2025)</div>
             <div>• Led a 12-member student team organizing coding contests for 600+ external participants.<br>• Managed budget allocation, venue arrangements, and sponsor communications.</div>
@@ -551,6 +609,14 @@
           <div class="sample-item">
             <div class="sample-title">Placement Representative — Department of Computer Applications (2025)</div>
             <div>• Coordinated campus placement drives for 120 MCA students, interfacing with 15+ visiting company HR teams.<br>• Managed candidate scheduling, resume collation, and technical lab readiness.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Lead Editor — College Technical Magazine (2024)</div>
+            <div>• Managed publication lifecycle of bi-annual department journal featuring 20+ student research articles.<br>• Oversaw peer reviews, formatting, and final print distribution to 500+ faculty and students.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Class Representative — MCA Program (2024 – 2026)</div>
+            <div>• Acted as primary liaison between 60 students and department faculty regarding schedule changes and academic resources.<br>• Facilitated study groups that improved overall class pass percentage by 12% in Advanced DBMS.</div>
           </div>
         </div>
 
@@ -564,18 +630,18 @@
       <section class="step" data-step="8">
         <div class="step-eyebrow">Step 9 / 12</div>
         <h2>Education</h2>
-        <p class="step-intro">Keep this short unless it's genuinely your strongest asset.</p>
+        <p class="step-intro">Degree titles, institution details, CGPA/marks, and core coursework.</p>
 
         <div class="coach-note">
           <span class="tag">Why this works</span>
-          <p>Lead with what's genuinely strong (CGPA, honors, specialization); leave out fluff rather than padding the section.</p>
+          <p>Lead with what's genuinely strong (CGPA, honors, specialization); detail relevant coursework to pass keyword ATS scans.</p>
         </div>
 
         <div id="educationEntries"></div>
         <button type="button" class="add-entry" id="addEducation">+ Add another degree/course</button>
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample education entries</h4>
           <div class="sample-item">
             <div class="sample-title">Master of Computer Applications (MCA) — Anna University (2024 – 2026)</div>
             <div>CGPA: 8.9/10 • Relevant Coursework: Data Structures &amp; Algorithms, Database Management Systems, Web Architecture, Distributed Systems.</div>
@@ -583,6 +649,14 @@
           <div class="sample-item">
             <div class="sample-title">B.Sc. Computer Science — University of Madras (2021 – 2024)</div>
             <div>Percentage: 84% • First Class with Distinction • Core Subjects: Object-Oriented Programming, Java, Software Engineering.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">B.C.A. (Bachelor of Computer Applications) — SRM Institute (2021 – 2024)</div>
+            <div>CGPA: 9.1/10 • Department Rank 2 • Core Coursework: C++, Data Structures, Computer Networks, Operating Systems, Web Tech.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">B.Tech. Computer Science &amp; Engineering — State University (2020 – 2024)</div>
+            <div>CGPA: 8.5/10 • Specialization in Artificial Intelligence &amp; Machine Learning • Capstone Project: Automated Anomaly Detection.</div>
           </div>
         </div>
 
@@ -600,14 +674,14 @@
 
         <div class="coach-note">
           <span class="tag">Why this works</span>
-          <p>A certification or hackathon placement is hard to fake. Include what's relevant to your target role and skip unrelated badges.</p>
+          <p>A certification or hackathon placement is hard to fake. Include what's relevant to your target role.</p>
         </div>
 
         <div id="achievementEntries"></div>
         <button type="button" class="add-entry" id="addAchievement">+ Add an achievement/certification</button>
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample achievement entries</h4>
           <div class="sample-item">
             <div class="sample-title">Smart India Hackathon — Finalist (2025)</div>
             <div>Top 5 team among 200+ applicants for developing a smart traffic monitoring web system.</div>
@@ -623,6 +697,18 @@
           <div class="sample-item">
             <div class="sample-title">1st Place — Inter-College Coding Competition (2024)</div>
             <div>Awarded 1st place among 80 participants in speed debugging and algorithm optimization.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Oracle Certified Associate, Java SE 11 Developer (2024)</div>
+            <div>Demonstrated proficiency in Java object-oriented programming, concurrency, and memory optimization.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">NPTEL Elite Gold Certification — Cloud Computing (2024)</div>
+            <div>Scored 92% in 12-week national course administered by IIT Kharagpur.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Meta Front-End Developer Professional Certificate (2024)</div>
+            <div>Completed 9-course series covering React, Javascript UI state, version control, and UX principles.</div>
           </div>
         </div>
 
@@ -640,16 +726,16 @@
 
         <div class="coach-note">
           <span class="tag">Signal-to-Noise Rule</span>
-          <p>Only mention 'hobbies' if they signal commitment, achievement, or skills relevant to your career. Avoid generic entries like "listening to music" or "watching movies."</p>
+          <p>Only mention pursuits if they signal commitment, achievement, or skills relevant to your career.</p>
         </div>
 
         <div id="interestEntries"></div>
         <button type="button" class="add-entry" id="addInterest">+ Add an interest</button>
 
         <div class="samples-box">
-          <h4>💡 Well-crafted sample entries</h4>
+          <h4>💡 Well-crafted sample interest entries</h4>
           <div class="sample-item">
-            <div class="sample-title">Open Source Technical Blogging</div>
+            <div class="sample-title">Open Source Technical Writing</div>
             <div>Authored 12+ technical articles on Hashnode discussing Web Performance and SQL Optimization, gaining 4,000+ total views.</div>
           </div>
           <div class="sample-item">
@@ -663,6 +749,14 @@
           <div class="sample-item">
             <div class="sample-title">Distance Running</div>
             <div>Trained for and completed two 10K amateur city runs, demonstrating physical endurance and discipline.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">UI/UX Design Exploration</div>
+            <div>Designed 10+ open-source mobile wireframes on Figma, focusing on mobile app accessibility and dark mode themes.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Raspberry Pi Hardware Projects</div>
+            <div>Built a personal home media server and network-level ad-blocker (Pi-hole) managing local network DNS.</div>
           </div>
         </div>
 
@@ -700,7 +794,7 @@
           <input type="hidden" id="ghBranch" value="main">
 
           <div style="margin-bottom:14px;">
-            <label for="ghPath">Filename in repository</label>
+            <label for="ghPath">Filename in repository<span class="req">*</span></label>
             <input type="text" id="ghPath" value="resumes/andrew-veda.html" placeholder="resumes/name.html">
           </div>
 
@@ -736,7 +830,7 @@
     </label>
     <input type="text" data-field="tech" placeholder="React • Firebase • QR Code">
 
-    <label>Project URL / Link <span class="hint" style="display:inline;">(optional)</span></label>
+    <label>Project URL / Link<span class="req">*</span></label>
     <input type="url" data-field="link" placeholder="github.com/andrewveda/library-system">
 
     <label>Key Achievements / Bullet Points<span class="req">*</span>
@@ -751,13 +845,13 @@
     <button type="button" class="entry-remove" data-remove>Remove ✕</button>
     <label>Role / title<span class="req">*</span></label>
     <input type="text" data-field="role" placeholder="Software Engineering Intern">
-    <label>Organization</label>
+    <label>Organization<span class="req">*</span></label>
     <input type="text" data-field="org" placeholder="Bluepeak Systems">
-    <label>Dates
+    <label>Dates<span class="req">*</span>
       <span class="hint">e.g. Jun 2025 – Aug 2025</span>
     </label>
     <input type="text" data-field="dates" placeholder="Jun 2025 – Aug 2025">
-    <label>What changed because you were there?
+    <label>What changed because you were there?<span class="req">*</span>
       <span class="hint">One bullet per line. Start with a verb, end with a number where you can.</span>
     </label>
     <textarea data-field="bullets" placeholder="Rebuilt onboarding email flow, cutting drop-off from 22% to 9%&#10;Shipped internal API used by 3 downstream teams"></textarea>
@@ -769,11 +863,11 @@
     <button type="button" class="entry-remove" data-remove>Remove ✕</button>
     <label>Position / Role title<span class="req">*</span></label>
     <input type="text" data-field="title" placeholder="Student Coordinator — National Tech Fest">
-    <label>Organization / Event</label>
+    <label>Organization / Event<span class="req">*</span></label>
     <input type="text" data-field="org" placeholder="Department of Computer Applications">
-    <label>Dates</label>
+    <label>Dates<span class="req">*</span></label>
     <input type="text" data-field="dates" placeholder="2024 – 2025">
-    <label>Key Responsibilities &amp; Impact
+    <label>Key Responsibilities &amp; Impact<span class="req">*</span>
       <span class="hint">One bullet per line. Detail your leadership and coordination work.</span>
     </label>
     <textarea data-field="bullets" placeholder="Led a team of 10 students to coordinate technical events for 500+ attendees.&#10;Managed event logistics, external participant registrations, and sponsorship."></textarea>
@@ -785,15 +879,15 @@
     <button type="button" class="entry-remove" data-remove>Remove ✕</button>
     <label>Degree / course<span class="req">*</span></label>
     <input type="text" data-field="degree" placeholder="Master of Computer Applications (MCA)">
-    <label>Institution</label>
+    <label>Institution<span class="req">*</span></label>
     <input type="text" data-field="school" placeholder="Anna University">
-    <label>Dates</label>
+    <label>Dates<span class="req">*</span></label>
     <input type="text" data-field="dates" placeholder="2024 – 2026">
-    <label>Notable detail
-      <span class="hint">Only if genuinely strong — CGPA, honors, specialization.</span>
+    <label>Notable detail<span class="req">*</span>
+      <span class="hint">CGPA, honors, specialization.</span>
     </label>
     <input type="text" data-field="detail" placeholder="CGPA 8.9/10 · Specialization: Web Engineering">
-    <label>Relevant coursework</label>
+    <label>Relevant coursework<span class="req">*</span></label>
     <input type="text" data-field="coursework" placeholder="Data Structures, DBMS, Web Development, Distributed Systems">
   </div>
 </template>
@@ -803,11 +897,11 @@
     <button type="button" class="entry-remove" data-remove>Remove ✕</button>
     <label>Title<span class="req">*</span></label>
     <input type="text" data-field="title" placeholder="Smart India Hackathon — Finalist">
-    <label>Context / issuer</label>
+    <label>Context / issuer<span class="req">*</span></label>
     <input type="text" data-field="context" placeholder="Govt. of India, national-level hackathon">
-    <label>Date</label>
+    <label>Date<span class="req">*</span></label>
     <input type="text" data-field="date" placeholder="Sep 2025">
-    <label>Link (optional)</label>
+    <label>Link<span class="req">*</span></label>
     <input type="url" data-field="link" placeholder="credential or announcement URL">
   </div>
 </template>
@@ -817,7 +911,7 @@
     <button type="button" class="entry-remove" data-remove>Remove ✕</button>
     <label>Interest / Pursuit<span class="req">*</span></label>
     <input type="text" data-field="title" placeholder="Open Source Technical Writing">
-    <label>Demonstrated Signal / Proof</label>
+    <label>Demonstrated Signal / Proof<span class="req">*</span></label>
     <input type="text" data-field="details" placeholder="Published 10+ technical blogs on Web Performance, 4k+ total readers.">
   </div>
 </template>
@@ -892,6 +986,23 @@
     return entries;
   }
 
+  function validateEntries(containerId, fields){
+    var container = document.getElementById(containerId);
+    var entries = container.querySelectorAll('.entry');
+    if (entries.length === 0) return false;
+    
+    var allValid = true;
+    entries.forEach(function(entryEl){
+      fields.forEach(function(f){
+        var input = entryEl.querySelector('[data-field="'+f+'"]');
+        if (!input || !input.value.trim()){
+          allValid = false;
+        }
+      });
+    });
+    return allValid;
+  }
+
   function collectTarget(){
     state.target = {
       role: val('targetRole'),
@@ -922,12 +1033,69 @@
   function collectStepData(idx){ collectByStep[idx](); }
   function collectAll(){ collectByStep.forEach(function(fn){ fn(); }); }
 
+  function validateStep(idx) {
+    if (idx === 0) {
+      if (!val('targetRole') || !val('targetCompany') || !val('expectedSkills') || !val('expectedProjects')) {
+        alert('All fields in Target Role & Expectation are mandatory.');
+        return false;
+      }
+    } else if (idx === 1) {
+      if (!val('fullName') || !val('email') || !val('phone') || !val('location') || !val('linkedin') || !val('github') || !val('portfolio') || !val('otherProfiles')) {
+        alert('All contact details and links are mandatory.');
+        return false;
+      }
+    } else if (idx === 2) {
+      if (!val('summary')) {
+        alert('Professional summary is mandatory.');
+        return false;
+      }
+    } else if (idx === 3) {
+      if (state.techSkills.length < 3) {
+        alert('Please add at least 3 mandatory technical skills.');
+        return false;
+      }
+    } else if (idx === 4) {
+      if (state.softSkills.length < 3) {
+        alert('Please add at least 3 mandatory soft skills.');
+        return false;
+      }
+    } else if (idx === 5) {
+      if (!validateEntries('projectEntries', ['title','tech','link','bullets'])) {
+        alert('All project fields are mandatory. Please fill in every field for each added entry.');
+        return false;
+      }
+    } else if (idx === 6) {
+      if (!validateEntries('experienceEntries', ['role','org','dates','bullets'])) {
+        alert('All experience fields are mandatory. Please fill in every field for each added entry.');
+        return false;
+      }
+    } else if (idx === 7) {
+      if (!validateEntries('roleEntries', ['title','org','dates','bullets'])) {
+        alert('All leadership role fields are mandatory. Please fill in every field for each added entry.');
+        return false;
+      }
+    } else if (idx === 8) {
+      if (!validateEntries('educationEntries', ['degree','school','dates','detail','coursework'])) {
+        alert('All education fields are mandatory. Please fill in every field for each added entry.');
+        return false;
+      }
+    } else if (idx === 9) {
+      if (!validateEntries('achievementEntries', ['title','context','date','link'])) {
+        alert('All achievement/certification fields are mandatory. Please fill in every field for each added entry.');
+        return false;
+      }
+    } else if (idx === 10) {
+      if (!validateEntries('interestEntries', ['title','details'])) {
+        alert('All interest fields are mandatory. Please fill in every field for each added entry.');
+        return false;
+      }
+    }
+    return true;
+  }
+
   document.getElementById('nextBtn').addEventListener('click', function(){
     collectTarget();
-    if (!state.target.role){
-      alert('Please specify a target role so we can optimize your resume layout.');
-      return;
-    }
+    if (!validateStep(0)) return;
     showStep(1);
   });
 
@@ -935,13 +1103,11 @@
     btn.addEventListener('click', function(){
       var idx = parseInt(btn.closest('.step').dataset.step,10);
       collectStepData(idx);
-      if (idx === 1 && (!state.contact.name || !state.contact.email)){
-        alert('Add at least your name and email before continuing.');
-        return;
-      }
+      if (!validateStep(idx)) return;
       if (idx < TOTAL_STEPS-1) showStep(idx+1);
     });
   });
+
   document.querySelectorAll('[data-back]').forEach(function(btn){
     btn.addEventListener('click', function(){
       var idx = parseInt(btn.closest('.step').dataset.step,10);
@@ -956,7 +1122,13 @@
     var container = document.getElementById(containerId);
     var clone = tpl.content.cloneNode(true);
     var entryEl = clone.querySelector('.entry');
-    entryEl.querySelector('[data-remove]').addEventListener('click', function(){ entryEl.remove(); });
+    entryEl.querySelector('[data-remove]').addEventListener('click', function(){
+      if (container.querySelectorAll('.entry').length <= 1) {
+        alert('At least one entry is mandatory for this section.');
+        return;
+      }
+      entryEl.remove();
+    });
     container.appendChild(clone);
   }
 
@@ -967,11 +1139,12 @@
   document.getElementById('addAchievement').addEventListener('click', function(){ addEntry('achievementEntries','achievementTemplate'); });
   document.getElementById('addInterest').addEventListener('click', function(){ addEntry('interestEntries','interestTemplate'); });
 
-  // seed initial entries
+  // seed initial mandatory entries
   addEntry('projectEntries','projectTemplate');
   addEntry('experienceEntries','experienceTemplate');
   addEntry('roleEntries','roleTemplate');
   addEntry('educationEntries','educationTemplate');
+  addEntry('achievementEntries','achievementTemplate');
   addEntry('interestEntries','interestTemplate');
 
   // ---------- Skill tags (technical + soft) ----------
@@ -1009,7 +1182,11 @@
       var evInput = document.getElementById(evidenceId);
       var v = input.value.trim();
       var ev = evInput.value.trim();
-      if (!v) { input.focus(); return; }
+      if (!v || !ev) { 
+        alert('Both Skill and Evidence/Quantification fields are mandatory.');
+        input.focus(); 
+        return; 
+      }
       state[arrKey].push({skill:v, evidence:ev});
       renderSkillTags(listElId, arrKey);
       input.value = ''; evInput.value = '';
