@@ -138,6 +138,17 @@
     background:none; border:none; color:var(--ink-soft); cursor:pointer; font-size:.9rem; line-height:1; padding:0 2px;
   }
 
+  .samples-box{
+    margin-top:16px; background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:12px 14px;
+  }
+  .samples-box h4{ margin:0 0 8px 0; font-family:'IBM Plex Mono', monospace; font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; color:var(--pine); }
+  .samples-box p{ font-size:.82rem; color:var(--ink-soft); margin:0 0 6px 0; }
+  .samples-box p:last-child{ margin-bottom:0; }
+  .sample-item{ background:#fff; border:1px solid var(--line); border-radius:6px; padding:8px 10px; margin-bottom:8px; font-size:.84rem; cursor:pointer; transition:border-color .15s ease; }
+  .sample-item:hover{ border-color:var(--pine); }
+  .sample-item:last-child{ margin-bottom:0; }
+  .sample-title{ font-weight:600; color:var(--ink); font-size:.82rem; margin-bottom:2px; }
+
   .step-nav{
     display:flex; justify-content:space-between; gap:10px; margin-top:24px; padding-top:16px; border-top:1px solid var(--line);
   }
@@ -172,7 +183,6 @@
   .pr-panel{ margin-top:22px; border-top:1px solid var(--line); padding-top:18px; }
   .pr-panel h3{font-size:1rem; margin-bottom:4px;}
   .pr-grid{display:grid; grid-template-columns:1fr 1fr; gap:0 10px;}
-  .small-note{font-size:.78rem; color:var(--ink-soft); margin-top:10px;}
 
   footer{ max-width:640px; margin:26px auto 0; padding:0 20px; color:var(--ink-soft); font-size:.78rem; text-align:center; }
 
@@ -192,7 +202,7 @@
 </header>
 
 <div class="progress-wrap">
-  <div class="progress-label"><span id="progressText">Step 1 of 10 — Target Role</span></div>
+  <div class="progress-label"><span id="progressText">Step 1 of 12 — Target Role</span></div>
   <div class="progress-track" id="progressTrack"></div>
 </div>
 
@@ -208,7 +218,7 @@
 
       <!-- STEP 0: TARGET ROLE & COMPANY -->
       <section class="step active" data-step="0">
-        <div class="step-eyebrow">Step 1 / 10</div>
+        <div class="step-eyebrow">Step 1 / 12</div>
         <h2>Target Role &amp; Expectation</h2>
         <p class="step-intro">Tailoring your resume to a target role dramatically increases ATS keyword match and recruiter interest.</p>
 
@@ -233,6 +243,18 @@
         </label>
         <textarea id="expectedProjects" placeholder="e.g. Production-ready web apps with authentication, database indexing, and CRUD functionality. Real-time updates or API integrations."></textarea>
 
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Full-Stack / Web Engineer</div>
+            <div>React, Node.js, PostgreSQL, REST APIs, Git, Docker • Production apps with user auth, state management, DB optimization.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Data Analyst / ML Trainee</div>
+            <div>Python, Pandas, SQL, Tableau, Scikit-learn • Data pipeline cleaning, statistical modeling, dashboard visualization.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" id="backBtn" disabled>Back</button>
           <button type="button" class="primary" id="nextBtn">Continue</button>
@@ -241,25 +263,25 @@
 
       <!-- STEP 1: CONTACT & LINKS -->
       <section class="step" data-step="1">
-        <div class="step-eyebrow">Step 2 / 10</div>
+        <div class="step-eyebrow">Step 2 / 12</div>
         <h2>Contact &amp; links</h2>
         <p class="step-intro">The plain facts a recruiter needs to reach you, plus the links that do a lot of quiet work for a technical resume.</p>
 
         <div class="coach-note">
-          <span class="tag">Why this works</span>
-          <p>For a technical role, a working GitHub profile is worth more than an extra bullet point — it's a costed signal, not a claim. A recruiter can scroll your commits in the time it takes to read one line of prose.</p>
+          <span class="tag">Privacy &amp; Signal Note</span>
+          <p>Since this resume template is published publicly on GitHub, we avoid collecting real personal phone numbers and private email addresses.</p>
         </div>
 
         <label for="fullName">Full name<span class="req">*</span></label>
         <input type="text" id="fullName" placeholder="e.g. Ananya Rao">
 
         <label for="email">Email<span class="req">*</span>
-          <span class="hint">Use firstname.lastname@... — skip nicknames and numbers.</span>
+          <span class="hint">Public placeholder used to protect your personal privacy.</span>
         </label>
-        <input type="email" id="email" placeholder="ananya.rao@email.com">
+        <input type="email" id="email" value="firstname.secondname@domain.com">
 
         <label for="phone">Phone number</label>
-        <input type="tel" id="phone" placeholder="+91 98765 43210">
+        <input type="tel" id="phone" value="91 2345 6789">
 
         <label for="location">City, State</label>
         <input type="text" id="location" placeholder="Chennai, Tamil Nadu">
@@ -278,9 +300,17 @@
         <input type="url" id="portfolio" placeholder="ananyarao.dev">
 
         <label for="otherProfiles">Other coding profiles <span class="hint" style="display:inline;">(optional)</span>
-          <span class="hint">LeetCode, Codeforces, HackerRank, GeeksforGeeks — e.g. LeetCode: leetcode.com/u/ananya</span>
+          <span class="hint">LeetCode, Codeforces, HackerRank, GeeksforGeeks</span>
         </label>
         <input type="text" id="otherProfiles" placeholder="LeetCode: leetcode.com/u/ananya">
+
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Clean Professional Links</div>
+            <div>LinkedIn: linkedin.com/in/ananyarao • GitHub: github.com/ananyarao • LeetCode: leetcode.com/u/ananyarao</div>
+          </div>
+        </div>
 
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
@@ -290,7 +320,7 @@
 
       <!-- STEP 2: SUMMARY -->
       <section class="step" data-step="2">
-        <div class="step-eyebrow">Step 3 / 10</div>
+        <div class="step-eyebrow">Step 3 / 12</div>
         <h2>Summary</h2>
         <p class="step-intro">Two to three lines. This is the part almost everyone reads, even when they skim the rest.</p>
 
@@ -304,6 +334,22 @@
         </label>
         <textarea id="summary" placeholder="MCA student specializing in full-stack web systems, with a track record of shipping production code — built and deployed a campus event platform used by 1,200+ students."></textarea>
 
+        <div class="samples-box">
+          <h4>💡 Role-tailored Sample Summaries for MCA Students</h4>
+          <div class="sample-item">
+            <div class="sample-title">Full-Stack Web Development</div>
+            <div>MCA student specializing in modern web development with React and Node.js. Track record of shipping production-ready applications, including a full-stack campus event platform deployed to 1,200+ active users.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Backend &amp; API Engineering</div>
+            <div>MCA graduate with a strong foundation in database architecture and RESTful service design. Engineered scalable backend services using Python/FastAPI and PostgreSQL, reducing search API latency by 35% in personal projects.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Data Analytics &amp; Applied AI</div>
+            <div>MCA candidate focusing on data engineering and machine learning workflows. Applied Pandas and Scikit-learn to analyze 50K+ data points for a predictive maintenance project, achieving 88% model precision.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
           <button type="button" class="primary" data-next>Continue</button>
@@ -312,7 +358,7 @@
 
       <!-- STEP 3: TECHNICAL SKILLS -->
       <section class="step" data-step="3">
-        <div class="step-eyebrow">Step 4 / 10</div>
+        <div class="step-eyebrow">Step 4 / 12</div>
         <h2>Technical skills</h2>
         <p class="step-intro">Languages, frameworks, tools, databases — kept to what you can actually defend in an interview.</p>
 
@@ -336,6 +382,18 @@
         </div>
         <div class="tag-list" id="techSkillList"></div>
 
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Python</div>
+            <div>2 years — 3 major projects including Data Pipeline &amp; REST API backend.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">PostgreSQL</div>
+            <div>1.5 years — Indexed schema design &amp; query optimization for 100k+ record datasets.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
           <button type="button" class="primary" data-next>Continue</button>
@@ -344,7 +402,7 @@
 
       <!-- STEP 4: SOFT SKILLS -->
       <section class="step" data-step="4">
-        <div class="step-eyebrow">Step 5 / 10</div>
+        <div class="step-eyebrow">Step 5 / 12</div>
         <h2>Soft skills</h2>
         <p class="step-intro">Kept separate from technical skills on purpose — they need a different kind of proof.</p>
 
@@ -368,6 +426,18 @@
         </div>
         <div class="tag-list" id="softSkillList"></div>
 
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Technical Communication</div>
+            <div>Presented 3 technical papers at inter-college symposiums &amp; led departmental peer tutorials.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Agile Collaboration</div>
+            <div>Served as student Scrum Master for 4-member final year project team over 6 months.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
           <button type="button" class="primary" data-next>Continue</button>
@@ -376,7 +446,7 @@
 
       <!-- STEP 5: PROJECTS -->
       <section class="step" data-step="5">
-        <div class="step-eyebrow">Step 6 / 10</div>
+        <div class="step-eyebrow">Step 6 / 12</div>
         <h2>Projects</h2>
         <p class="step-intro">Academic, personal, or hackathon projects. For a student resume, this section often carries the most weight.</p>
 
@@ -388,6 +458,14 @@
         <div id="projectEntries"></div>
         <button type="button" class="add-entry" id="addProject">+ Add another project</button>
 
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Campus Library Management System (React, Firebase, Node.js)</div>
+            <div>• Developed a QR-based check-in application deployed for 1,200+ active students.<br>• Reduced average queue waiting time from 12 minutes to under 3 minutes per student.<br>• Implemented real-time database listeners to track live library seat availability.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
           <button type="button" class="primary" data-next>Continue</button>
@@ -396,7 +474,7 @@
 
       <!-- STEP 6: EXPERIENCE -->
       <section class="step" data-step="6">
-        <div class="step-eyebrow">Step 7 / 10</div>
+        <div class="step-eyebrow">Step 7 / 12</div>
         <h2>Experience &amp; internships</h2>
         <p class="step-intro">Jobs, internships, or teaching assistantships. Most recent first. Skip if none yet.</p>
 
@@ -408,15 +486,55 @@
         <div id="experienceEntries"></div>
         <button type="button" class="add-entry" id="addExperience">+ Add another role</button>
 
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Software Engineering Intern — Bluepeak Systems (Jun 2025 – Aug 2025)</div>
+            <div>• Rebuilt automated onboarding email pipeline, cutting user drop-off rate from 22% to 9%.<br>• Designed and integrated 3 RESTful endpoints consumed by mobile app teams.<br>• Authored unit test coverage improving core module reliability by 28%.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
           <button type="button" class="primary" data-next>Continue</button>
         </div>
       </section>
 
-      <!-- STEP 7: EDUCATION -->
+      <!-- STEP 7: ROLES & RESPONSIBILITIES -->
       <section class="step" data-step="7">
-        <div class="step-eyebrow">Step 8 / 10</div>
+        <div class="step-eyebrow">Step 8 / 12</div>
+        <h2>Roles &amp; Responsibilities</h2>
+        <p class="step-intro">Leadership roles, student coordinators, club positions, or campus representative duties.</p>
+
+        <div class="coach-note">
+          <span class="tag">Why this works</span>
+          <p>Highlights ownership, initiative, and administrative ability outside standard coursework. Shows recruiters you take responsibility.</p>
+        </div>
+
+        <div id="roleEntries"></div>
+        <button type="button" class="add-entry" id="addRole">+ Add another role &amp; responsibility</button>
+
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Student Coordinator — National Level Tech Symposium (2025)</div>
+            <div>• Led a 12-member student team organizing coding contests for 600+ external participants.<br>• Managed budget allocation, venue arrangements, and sponsor communications.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Head of Technical Content — Campus Developer Club (2024 – 2025)</div>
+            <div>• Conducted 8 hands-on weekend workshops on Git and Web Development for junior students.<br>• Curated technical problem sets and mentored 40+ beginner programmers.</div>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button type="button" class="secondary" data-back>Back</button>
+          <button type="button" class="primary" data-next>Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 8: EDUCATION -->
+      <section class="step" data-step="8">
+        <div class="step-eyebrow">Step 9 / 12</div>
         <h2>Education</h2>
         <p class="step-intro">Keep this short unless it's genuinely your strongest asset.</p>
 
@@ -428,15 +546,23 @@
         <div id="educationEntries"></div>
         <button type="button" class="add-entry" id="addEducation">+ Add another degree/course</button>
 
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Master of Computer Applications (MCA) — Anna University (2024 – 2026)</div>
+            <div>CGPA: 8.9/10 • Relevant Coursework: Data Structures &amp; Algorithms, Database Management Systems, Web Architecture, Distributed Systems.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
           <button type="button" class="primary" data-next>Continue</button>
         </div>
       </section>
 
-      <!-- STEP 8: ACHIEVEMENTS & CERTIFICATIONS -->
-      <section class="step" data-step="8">
-        <div class="step-eyebrow">Step 9 / 10</div>
+      <!-- STEP 9: ACHIEVEMENTS & CERTIFICATIONS -->
+      <section class="step" data-step="9">
+        <div class="step-eyebrow">Step 10 / 12</div>
         <h2>Achievements &amp; certifications</h2>
         <p class="step-intro">Hackathon results, certifications, awards, competitive-coding ranks.</p>
 
@@ -448,15 +574,59 @@
         <div id="achievementEntries"></div>
         <button type="button" class="add-entry" id="addAchievement">+ Add an achievement/certification</button>
 
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Smart India Hackathon — Finalist (2025)</div>
+            <div>Top 5 team among 200+ applicants for developing a smart traffic monitoring web system.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">AWS Certified Developer – Associate (2025)</div>
+            <div>Validated expertise in developing, deploying, and debugging cloud-based applications.</div>
+          </div>
+        </div>
+
         <div class="step-nav">
           <button type="button" class="secondary" data-back>Back</button>
           <button type="button" class="primary" data-next>Continue</button>
         </div>
       </section>
 
-      <!-- STEP 9: REVIEW & EXPORT -->
-      <section class="step" data-step="9">
-        <div class="step-eyebrow">Step 10 / 10</div>
+      <!-- STEP 10: INTERESTS -->
+      <section class="step" data-step="10">
+        <div class="step-eyebrow">Step 11 / 12</div>
+        <h2>Interests</h2>
+        <p class="step-intro">Personal pursuits that demonstrate discipline, technical curiosity, or creative drive.</p>
+
+        <div class="coach-note">
+          <span class="tag">Signal-to-Noise Rule</span>
+          <p>Only mention 'hobbies' if they signal commitment, achievement, or skills relevant to your career. Avoid generic entries like "listening to music" or "watching movies."</p>
+        </div>
+
+        <div id="interestEntries"></div>
+        <button type="button" class="add-entry" id="addInterest">+ Add an interest</button>
+
+        <div class="samples-box">
+          <h4>💡 Well-crafted sample entries</h4>
+          <div class="sample-item">
+            <div class="sample-title">Open Source Technical Blogging</div>
+            <div>Authored 12+ technical articles on Hashnode discussing Web Performance and SQL Optimization, gaining 4,000+ total views.</div>
+          </div>
+          <div class="sample-item">
+            <div class="sample-title">Competitive Chess</div>
+            <div>Rated 1600+ on Chess.com; active participant in regional collegiate tournaments demonstrating tactical planning.</div>
+          </div>
+        </div>
+
+        <div class="step-nav">
+          <button type="button" class="secondary" data-back>Back</button>
+          <button type="button" class="primary" data-next>Continue</button>
+        </div>
+      </section>
+
+      <!-- STEP 11: REVIEW & EXPORT -->
+      <section class="step" data-step="11">
+        <div class="step-eyebrow">Step 12 / 12</div>
         <h2>Review &amp; export</h2>
         <p class="step-intro">One last review, then your resume is ready to download or publish.</p>
 
@@ -479,19 +649,19 @@
           <div class="pr-grid">
             <div>
               <label for="ghOwner">Repo owner</label>
-              <input type="text" id="ghOwner" placeholder="octocat">
+              <input type="text" id="ghOwner" value="andrewveda">
             </div>
             <div>
               <label for="ghRepo">Repo name</label>
-              <input type="text" id="ghRepo" placeholder="student-resumes">
+              <input type="text" id="ghRepo" value="resume">
             </div>
             <div>
               <label for="ghBranch">Base branch</label>
-              <input type="text" id="ghBranch" placeholder="main" value="main">
+              <input type="text" id="ghBranch" value="main">
             </div>
             <div>
               <label for="ghPath">File path in repo</label>
-              <input type="text" id="ghPath" placeholder="resumes/ananya-rao.html">
+              <input type="text" id="ghPath" value="resumes/ananya-rao.html" placeholder="resumes/name.html">
             </div>
           </div>
 
@@ -533,7 +703,7 @@
     <label>Key Achievements / Bullet Points<span class="req">*</span>
       <span class="hint">One bullet point per line. Focus on actions, results, and features.</span>
     </label>
-    <textarea data-field="bullets" style="min-height:100px;" placeholder="Developed a QR-based library check-in system.&#10;Generated unique QR codes for every student.&#10;Reduced average check-in time from 12 minutes to 9 minutes.&#10;Implemented real-time attendance updates using Firebase.&#10;Designed a mobile-first interface for students and librarians."></textarea>
+    <textarea data-field="bullets" style="min-height:100px;" placeholder="Developed a QR-based library check-in system.&#10;Generated unique QR codes for every student.&#10;Reduced average check-in time from 12 minutes to 3 minutes.&#10;Implemented real-time attendance updates using Firebase."></textarea>
   </div>
 </template>
 
@@ -555,6 +725,22 @@
   </div>
 </template>
 
+<template id="roleTemplate">
+  <div class="entry" data-entry="role">
+    <button type="button" class="entry-remove" data-remove>Remove ✕</button>
+    <label>Position / Role title<span class="req">*</span></label>
+    <input type="text" data-field="title" placeholder="Student Coordinator — National Tech Fest">
+    <label>Organization / Event</label>
+    <input type="text" data-field="org" placeholder="Department of Computer Applications">
+    <label>Dates</label>
+    <input type="text" data-field="dates" placeholder="2024 – 2025">
+    <label>Key Responsibilities &amp; Impact
+      <span class="hint">One bullet per line. Detail your leadership and coordination work.</span>
+    </label>
+    <textarea data-field="bullets" placeholder="Led a team of 10 students to coordinate technical events for 500+ attendees.&#10;Managed event logistics, external participant registrations, and sponsorship."></textarea>
+  </div>
+</template>
+
 <template id="educationTemplate">
   <div class="entry" data-entry="education">
     <button type="button" class="entry-remove" data-remove>Remove ✕</button>
@@ -567,9 +753,9 @@
     <label>Notable detail
       <span class="hint">Only if genuinely strong — CGPA, honors, specialization.</span>
     </label>
-    <input type="text" data-field="detail" placeholder="CGPA 9.1/10 · Specialization: Cloud Computing">
+    <input type="text" data-field="detail" placeholder="CGPA 8.9/10 · Specialization: Web Engineering">
     <label>Relevant coursework</label>
-    <input type="text" data-field="coursework" placeholder="Data Structures, DBMS, Machine Learning, Distributed Systems">
+    <input type="text" data-field="coursework" placeholder="Data Structures, DBMS, Web Development, Distributed Systems">
   </div>
 </template>
 
@@ -587,23 +773,35 @@
   </div>
 </template>
 
+<template id="interestTemplate">
+  <div class="entry" data-entry="interest">
+    <button type="button" class="entry-remove" data-remove>Remove ✕</button>
+    <label>Interest / Pursuit<span class="req">*</span></label>
+    <input type="text" data-field="title" placeholder="Open Source Technical Writing">
+    <label>Demonstrated Signal / Proof</label>
+    <input type="text" data-field="details" placeholder="Published 10+ technical blogs on Web Performance, 4k+ total readers.">
+  </div>
+</template>
+
 <script>
 (function(){
   "use strict";
 
-  var TOTAL_STEPS = 10;
+  var TOTAL_STEPS = 12;
   var currentStep = 0;
 
   var state = {
     target: {},
-    contact: {},
+    contact: { email: "firstname.secondname@domain.com", phone: "91 2345 6789" },
     summary: "",
     techSkills: [],
     softSkills: [],
     projects: [],
     experience: [],
+    roles: [],
     education: [],
-    achievements: []
+    achievements: [],
+    interests: []
   };
 
   // ---------- Progress bar ----------
@@ -613,7 +811,10 @@
     seg.className = 'progress-seg';
     track.appendChild(seg);
   }
-  var stepLabels = ['Target Role','Contact & links','Summary','Technical skills','Soft skills','Projects','Experience','Education','Achievements & certs','Review & export'];
+  var stepLabels = [
+    'Target Role','Contact & links','Summary','Technical skills','Soft skills',
+    'Projects','Experience','Roles & Responsibilities','Education','Achievements & certs','Interests','Review & export'
+  ];
 
   function updateProgress(){
     var segs = track.querySelectorAll('.progress-seg');
@@ -670,12 +871,14 @@
   function collectSummary(){ state.summary = val('summary'); }
   function collectProjects(){ state.projects = collectEntries('projectEntries', ['title','tech','link','bullets']); }
   function collectExperience(){ state.experience = collectEntries('experienceEntries', ['role','org','dates','bullets']); }
+  function collectRoles(){ state.roles = collectEntries('roleEntries', ['title','org','dates','bullets']); }
   function collectEducation(){ state.education = collectEntries('educationEntries', ['degree','school','dates','detail','coursework']); }
   function collectAchievements(){ state.achievements = collectEntries('achievementEntries', ['title','context','date','link']); }
+  function collectInterests(){ state.interests = collectEntries('interestEntries', ['title','details']); }
 
   var collectByStep = [
     collectTarget, collectContact, collectSummary, function(){}, function(){},
-    collectProjects, collectExperience, collectEducation, collectAchievements, function(){}
+    collectProjects, collectExperience, collectRoles, collectEducation, collectAchievements, collectInterests, function(){}
   ];
   function collectStepData(idx){ collectByStep[idx](); }
   function collectAll(){ collectByStep.forEach(function(fn){ fn(); }); }
@@ -720,13 +923,17 @@
 
   document.getElementById('addProject').addEventListener('click', function(){ addEntry('projectEntries','projectTemplate'); });
   document.getElementById('addExperience').addEventListener('click', function(){ addEntry('experienceEntries','experienceTemplate'); });
+  document.getElementById('addRole').addEventListener('click', function(){ addEntry('roleEntries','roleTemplate'); });
   document.getElementById('addEducation').addEventListener('click', function(){ addEntry('educationEntries','educationTemplate'); });
   document.getElementById('addAchievement').addEventListener('click', function(){ addEntry('achievementEntries','achievementTemplate'); });
+  document.getElementById('addInterest').addEventListener('click', function(){ addEntry('interestEntries','interestTemplate'); });
 
-  // seed one blank entry in each section
+  // seed initial entries
   addEntry('projectEntries','projectTemplate');
   addEntry('experienceEntries','experienceTemplate');
+  addEntry('roleEntries','roleTemplate');
   addEntry('educationEntries','educationTemplate');
+  addEntry('interestEntries','interestTemplate');
 
   // ---------- Skill tags (technical + soft) ----------
   function renderSkillTags(listElId, arrKey){
@@ -789,7 +996,6 @@
   function bulletsToLis(text){
     return (text||'').split('\n').map(function(l){return l.trim();}).filter(Boolean)
       .map(function(l){
-        // Clean off bullet indicators if user manually types them
         var cleanLine = l.replace(/^[\bullet\-\*\s]+/, '');
         return '<li>' + esc(cleanLine) + '</li>';
       }).join('');
@@ -855,6 +1061,16 @@
       });
     }
 
+    if (state.roles.length){
+      parts.push('<h2>Roles &amp; Responsibilities</h2>');
+      state.roles.forEach(function(r){
+        parts.push('<h3>'+esc(r.title||'')+(r.org? ' — '+esc(r.org):'')+'</h3>');
+        if (r.dates) parts.push('<p class="dates">'+esc(r.dates)+'</p>');
+        var lis = bulletsToLis(r.bullets);
+        if (lis) parts.push('<ul>'+lis+'</ul>');
+      });
+    }
+
     if (state.education.length){
       parts.push('<h2>Education</h2>');
       state.education.forEach(function(ed){
@@ -873,6 +1089,13 @@
         if (line) parts.push('<p class="dates">'+line+'</p>');
         if (a.link) parts.push('<p>'+esc(a.link)+'</p>');
       });
+    }
+
+    if (state.interests.length){
+      parts.push('<h2>Interests</h2>');
+      parts.push('<ul>' + state.interests.map(function(it){
+        return '<li><strong>'+esc(it.title)+'</strong>' + (it.details ? ' — '+esc(it.details) : '') + '</li>';
+      }).join('') + '</ul>');
     }
 
     return parts.join('\n');
@@ -985,7 +1208,7 @@
         var loaded = JSON.parse(reader.result);
         state = Object.assign({
           target:{}, contact:{}, summary:'', techSkills:[], softSkills:[],
-          projects:[], experience:[], education:[], achievements:[]
+          projects:[], experience:[], roles:[], education:[], achievements:[], interests:[]
         }, loaded);
         applyStateToForm();
       } catch(err){
@@ -1004,8 +1227,8 @@
 
     var c = state.contact || {};
     document.getElementById('fullName').value = c.name || '';
-    document.getElementById('email').value = c.email || '';
-    document.getElementById('phone').value = c.phone || '';
+    document.getElementById('email').value = c.email || 'firstname.secondname@domain.com';
+    document.getElementById('phone').value = c.phone || '91 2345 6789';
     document.getElementById('location').value = c.location || '';
     document.getElementById('linkedin').value = c.linkedin || '';
     document.getElementById('github').value = c.github || '';
@@ -1015,8 +1238,10 @@
 
     fillEntries('projectEntries','projectTemplate', state.projects, ['title','tech','link','bullets']);
     fillEntries('experienceEntries','experienceTemplate', state.experience, ['role','org','dates','bullets']);
+    fillEntries('roleEntries','roleTemplate', state.roles, ['title','org','dates','bullets']);
     fillEntries('educationEntries','educationTemplate', state.education, ['degree','school','dates','detail','coursework']);
     fillEntries('achievementEntries','achievementTemplate', state.achievements, ['title','context','date','link']);
+    fillEntries('interestEntries','interestTemplate', state.interests, ['title','details']);
 
     renderSkillTags('techSkillList','techSkills');
     renderSkillTags('softSkillList','softSkills');
